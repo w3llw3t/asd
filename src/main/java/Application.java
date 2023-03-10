@@ -1,4 +1,4 @@
-import Animals.Kotik;
+import animals.Kotik;
 
 public class Application {
     public static void main(String[] args) {
@@ -10,11 +10,11 @@ public class Application {
         kotik2.setWeight(8);
         kotik2.setSatiety(4);
 
-        String [] array = kotik2.liveAnotherDay();
+        String[] array = kotik2.liveAnotherDay();
         for (String s : array) {
             System.out.println(s);
         }
-
+/*
         System.out.print("Котика зовут " + kotik2.getName());
         System.out.println(", его вес = " + kotik2.getWeight());
 
@@ -27,5 +27,8 @@ public class Application {
             return false;
         }
         return kotik.getVoice().equals(kotik2.getVoice());
+    }
+
+     */
     }
 }

@@ -1,10 +1,9 @@
-package Animals;
+package animals;
 
-public class Kotik {
+public class Kotik extends Carnivorous implements Run, Swim, Voice {
     private static final int METHODS = 5;
     private String name;
     private String voice;
-    private int satiety;
     private int weight;
 
     public static int getCount() {
@@ -19,10 +18,6 @@ public class Kotik {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getVoice() {
-        return voice;
     }
 
     public void setVoice(String voice) {
@@ -96,7 +91,7 @@ public class Kotik {
         } else
         return false;
     }
-
+/*
     public void eat(int energy) {
         satiety += energy;
     }
@@ -109,7 +104,7 @@ public class Kotik {
     public void eat() {
         eat(3, "ЕДУ");
     }
-
+*/
     public String[] liveAnotherDay () {
         String[] action = new String[24];
         for (int i = 0; i < action.length; i++) {
@@ -166,6 +161,20 @@ public class Kotik {
     }
     public void setFood (String food) {
         this.food = food;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Kotik бегает");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("Kotik плавает");
+    }
+    @Override
+    public String getVoice() {
+        return voice;
     }
 }
 
